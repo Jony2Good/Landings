@@ -1,0 +1,35 @@
+.about {
+  padding-top: 4.938rem;
+  padding-bottom: 4.438rem;
+}
+
+.title__about {
+  margin-bottom: 0.938rem;
+}
+
+.about__text {
+  max-width: 68.188rem;
+}
+
+@media (max-width: 1280px) {
+  .about {
+    padding-bottom: 4.375rem;
+  }
+}
+@media (max-width: 610px) {
+  .about {
+    padding: 3rem 0.2rem 2.3rem 0.2rem;
+  }
+  .title__about {
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.2rem;
+  }
+  .about__text {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+}

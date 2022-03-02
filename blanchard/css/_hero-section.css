@@ -1,0 +1,222 @@
+.hero .hero__container {
+  position: relative;
+  z-index: 5;
+}
+
+.hero__container {
+  padding: 4.5rem 0 8.875rem 10.063rem;
+  margin: 0;
+  max-width: 45.625rem;
+}
+
+.hero__container > * {
+  pointer-events: auto;
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 4.375rem;
+  line-height: 5.188rem;
+  color: var(--white);
+  margin-bottom: 1.063rem;
+}
+
+.hero__text {
+  margin-top: 0;
+  margin-bottom: 1.875rem;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}
+
+.hero__text:last-of-type {
+  margin-bottom: 6.875rem;
+}
+
+.hero__link {
+  position: relative;
+  padding: 1.375rem 2.188rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  color: var(--white);
+  outline: none;
+  border-radius: 6.25rem;
+  background-color: var(--violet-dark);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero__link::after {
+  content: "";
+  position: absolute;
+  top: -0.313rem;
+  right: -0.313rem;
+  bottom: -0.313rem;
+  left: -0.313rem;
+  border: 0.125rem solid var(--violet-dark);
+  border-radius: inherit;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.hero__link:focus::after {
+  opacity: 1;
+}
+
+.hero__link:hover,
+.hero__link:active {
+  padding: 1.188rem 2rem;
+  border: 0.188rem solid #d1a9f0;
+}
+
+.hero__link:active {
+  background-color: var(--violet-light);
+}
+
+@-webkit-keyframes resize {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes resize {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+/* swiper  */
+
+.top-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.header__swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: resize;
+          animation-name: resize;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.slide {
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: lightgray;
+}
+
+.header__swiper-slide-1 {
+  background-image: url("../img/hero-first.jpg");
+}
+
+.header__swiper-slide-2 {
+  background-image: url("../img/hero-second.jpg");
+}
+
+.header__swiper-slide-3 {
+  background-image: url("../img/hero-third.jpg");
+}
+
+.header__nav-item:last-child {
+  margin-right: 22vw;
+}
+
+/* media queries  */
+
+@media (max-width: 1280px) {
+  .hero__slide--1 {
+    background-image: url("../img/hero-1024-first.jpg");
+  }
+  .hero__slide--2 {
+    background-image: url("../img/hero-1024-second.jpg");
+  }
+  .hero__slide--3 {
+    background-image: url("../img/hero-1024-third.jpg");
+  }
+
+  .hero__container {
+    padding: 7.1rem 0 8.24rem 3.29rem;
+  }
+
+  .hero__title {
+    margin-bottom: 0.5rem;
+  }
+  .hero__text {
+    max-width: 41.313rem;
+    margin-bottom: 8.313rem;
+  }
+  .hero__text:last-of-type {
+    margin-bottom: 9.875rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .hero {
+    margin-bottom: 3.313rem;
+  }
+  .hero__slide--1 {
+    background-image: url("../img/hero-320-first.jpg");
+  }
+  .hero__slide--2 {
+    background-image: url("../img/hero-320-second.jpg");
+  }
+  .hero__slide--3 {
+    background-image: url("../img/hero-320-third.jpg");
+  }
+  .hero__container {
+    padding: 1.875rem 2rem 0 2rem;
+    text-align: center;
+  }
+  .hero__title {
+    margin: 0 auto;
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+    line-height: 2.375rem;
+  }
+  .hero__text {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+  .hero__text:last-of-type {
+    margin-bottom: 2.9rem;
+  }
+
+  .hero__link {
+    margin: 0 auto;
+    padding: 0.688rem 1.188rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
