@@ -1,5 +1,13 @@
 # Study-projects
-Scillbox.ru school
-1. http://lagoona.ct77688.tmweb.ru/
+Scillbox.ru school (my progess)
 
-2. http://evklid-study.ct77688.tmweb.ru/
+First project:
+http://lagoona.ct77688.tmweb.ru/ 
+
+https://jony2good.github.io/Study-projects/lagoona/
+
+Second project:
+http://evklid-study.ct77688.tmweb.ru/
+
+https://jony2good.github.io/Study-projects/evklid/
+
