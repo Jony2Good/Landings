@@ -279,7 +279,8 @@
   .contacts-form__validation {
     margin-bottom: 0.75rem;
   }
-}
+
+ }
 
 @media (max-width: 576px) {
   .contacts__top {
