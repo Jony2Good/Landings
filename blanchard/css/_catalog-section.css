@@ -1,10 +1,10 @@
-.catalog__container {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .catalog__header {
-  max-width: 67%;
+  max-width: 68%;
   margin-bottom: 2.3rem;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .catalog__card {
-  max-width: 48%;
+  max-width: 46.9%;
   margin-right: 0.938rem;
 }
 
@@ -33,8 +33,14 @@
   min-width: 50%;
 }
 
+
+.catalog__author-pic-link {
+  display: block;
+  width: 100%;
+}
+
 .catalog__author-pic {
-  margin-bottom: 1.3rem;
+  margin-bottom: 31px;
 }
 
 .author-title {
@@ -51,7 +57,6 @@
 }
 
 .author-descr {
-  padding-right: 1.25rem;
   margin: 0;
   line-height: 2rem;
 }
@@ -189,8 +194,9 @@
 }
 
 .content-wrap {
-  padding-top: 1.625rem;
-  padding-bottom: 3.53rem;
+  padding-top: 28px;
+  padding-bottom: 55px;
+
 }
 
 .text {
@@ -206,7 +212,6 @@
 
 .catalog__author-item {
   width: calc(100% / 3 + 117px);
-  margin-right: 2.688rem;
 }
 
 .catalog__author-link {
@@ -242,8 +247,13 @@
   color: var(--dark);
 }
 
+.content-inner {
+  display: flex;
+}
+
 .blank {
   position: relative;
+  display: inline-block;
   margin-right: 1.5rem;
   padding: 0.75rem;
   width: 17.188rem;
@@ -260,15 +270,7 @@
 }
 
 .blank-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
+  display: inline-block;
   align-self: center;
   max-width: 17.188rem;
 }
@@ -315,6 +317,7 @@
 .descr-link:focus-visible {
   color: var(--white);
   background-color: var(--violet-dark);
+  outline: none;
 }
 
 /* media queries  */
@@ -324,9 +327,6 @@
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-  }
-  .catalog__card {
-    margin-right: 3.125rem;
   }
 
   .catalog__author-item {
@@ -342,34 +342,69 @@
 @media (max-width: 1024px) {
   .catalog__author-item {
     width: calc(100% / 2 + 5.688rem);
-    line-height: 1.875rem;
+
   }
-  .catalog__container {
-    padding-bottom: 1.7rem;
+  .catalog {
+    padding-bottom: 35px;
 }
 
   .content-wrap {
-    padding-top: 1.813rem;
-    padding-bottom: 1.063rem;
+    padding-top: 26px;
+    padding-bottom: 0;
   }
 
   .catalog__header {
     max-width: none;
+    margin-bottom: 39px;
   }
   .catalog__title {
-    margin-bottom: 0.8rem;
+    margin-bottom: 16px;
   }
   .author-descr {
     padding: 0;
   }
-
-  .catalog__accord {
-    margin-bottom: 3.125rem;
-  }
+  .catalog__author-pic {
+    margin-bottom: 29px;
+}
   .catalog__card {
     text-align: center;
-    max-width: 55%;
+    max-width: 47.4%;
+    margin-right: 48px;
   }
+
+  .heading {
+    padding: 44px 72px 43px 0;
+  }
+
+  .head-icon {
+    position: absolute;
+    top: 51.2%;
+    right: -0.3rem;
+  }
+
+  .blank-info {
+    align-self: flex-start;
+    max-width: 227px;
+}
+.blank {
+  position: relative;
+  display: inline-block;
+  margin-right: 24px;
+  padding: 8px;
+  width: 173px;
+  height: 114px;
+  border: 2px solid #b7b7b7;
+  background-color: transparent;
+}
+.blank-header {
+  margin-bottom: 0;
+}
+
+.blank-text {
+  margin-bottom: 0;
+}
+
+
   .catalog__info {
     text-align: left;
   }
@@ -380,8 +415,8 @@
 }
 
 @media (max-width: 768px) {
-  .catalog__container {
-    padding-bottom: 4.3rem;
+  .catalog {
+    padding-bottom: 35px;
 }
   .catalog__inner {
     -webkit-box-orient: vertical;
@@ -405,7 +440,7 @@
     margin-bottom: 1rem;
   }
   .catalog__accord {
-    margin-bottom: 2.93rem;
+    margin-bottom: 47px;
   }
 
   .content-wrap {
@@ -415,16 +450,20 @@
 
   .catalog__card {
     text-align: center;
-    max-width: 100%;
+    min-width: 100%;
     margin-right: 0;
   }
+  .head-icon {
+    top: 49.2%;
+    right: -0.4rem;
+}
+.heading {
+  padding: 46px 72px 41px 0;
 
-  .catalog__author-pic {
-    margin-bottom: 1.3rem;
-  }
+}
 }
 
-@media (max-width: 610px) {
+@media (max-width: 700px) {
   .catalog__author-list {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -450,10 +489,13 @@
     font-weight: 400;
     line-height: 2.375rem;
   }
+  .catalog__accord {
+    margin-bottom: 51px;
+}
 
-  .catalog__container {
-    padding-top: 3rem;
-    padding-bottom: 3.29rem;
+  .catalog {
+    padding-top: 48px;
+    padding-bottom: 50px;
   }
 
   .catalog__text {
@@ -470,6 +512,8 @@
     line-height: 2rem;
   }
   .head-icon {
+    top: 52.2%;
+    right: 1px;
     width: 1.875rem;
     height: 1.875rem;
   }
@@ -484,7 +528,7 @@
   }
 
   .catalog__author-pic {
-    margin-bottom: 0.8rem;
+    margin-bottom: 18px;
   }
 
   .blank {

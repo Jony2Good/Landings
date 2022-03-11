@@ -32,7 +32,6 @@ body {
   font-size: 16px;
   line-height: 32px;
   color: var(--dark);
-  overflow-x: hidden;
 }
 
 .flex {
@@ -46,8 +45,10 @@ body {
 }
 
 .container {
+  max-width: 1700px;
   margin: 0 auto;
-  padding: 0 9.9rem;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .hero-title {
@@ -86,15 +87,9 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 1280px) {
-  .container {
-    padding-right: 3.125rem;
-    padding-left: 3.125rem;
-    }
-  }
 @media (max-width: 610px) {
   .container {
-    padding-right: 0.9rem;
-    padding-left: 0.9rem;
+    padding-right: 14px;
+    padding-left: 14px;
   }
 }

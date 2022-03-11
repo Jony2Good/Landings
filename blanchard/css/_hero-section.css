@@ -4,21 +4,24 @@
 }
 
 .hero__container {
-  padding: 4.5rem 0 8.875rem 10.063rem;
+  padding: 4.5rem 0 8.875rem 0;
   margin: 0;
-  max-width: 45.625rem;
+  max-width: 586px;
 }
 
 .hero__container > * {
   pointer-events: auto;
 }
+.hero {
+  background-color: var(--dark);
+}
 
 .hero__title {
   font-weight: 700;
-  font-size: 4.375rem;
-  line-height: 5.188rem;
+  font-size: 72px;
+  line-height: 83px;
   color: var(--white);
-  margin-bottom: 1.063rem;
+  margin-bottom: 17px;
 }
 
 .hero__text {
@@ -41,12 +44,11 @@
   font-size: 1.125rem;
   line-height: 1.563rem;
   color: var(--white);
-  outline: none;
   border-radius: 6.25rem;
   background-color: var(--violet-dark);
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, outline .3s ease-in-out;
 }
 
 .hero__link::after {
@@ -70,8 +72,11 @@
 
 .hero__link:hover,
 .hero__link:active {
-  padding: 1.188rem 2rem;
-  border: 0.188rem solid #d1a9f0;
+  outline: 3px solid var(--violet-super-light);
+}
+
+.hero__link:focus-visible {
+  outline: none;
 }
 
 .hero__link:active {
@@ -109,7 +114,7 @@
   overflow: hidden;
 }
 
-.header__swiper-container {
+.swiper-top {
   position: absolute;
   top: 0;
   left: 0;
@@ -135,21 +140,18 @@
   background-color: lightgray;
 }
 
-.header__swiper-slide-1 {
+.swiper-slide-1 {
   background-image: url("../img/hero-first.jpg");
 }
 
-.header__swiper-slide-2 {
+.swiper-slide-2 {
   background-image: url("../img/hero-second.jpg");
 }
 
-.header__swiper-slide-3 {
+.swiper-slide-3 {
   background-image: url("../img/hero-third.jpg");
 }
 
-.header__nav-item:last-child {
-  margin-right: 22vw;
-}
 
 /* media queries  */
 
@@ -165,25 +167,25 @@
   }
 
   .hero__container {
-    padding: 7.1rem 0 8.24rem 3.29rem;
+    max-width: 660px;
+    padding-top: 113px;
+    padding-bottom: 134px;
   }
 
   .hero__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: 11px;
   }
   .hero__text {
     max-width: 41.313rem;
     margin-bottom: 8.313rem;
   }
   .hero__text:last-of-type {
-    margin-bottom: 9.875rem;
+    margin-bottom: 153px;
   }
 }
 
 @media (max-width: 610px) {
-  .hero {
-    margin-bottom: 3.313rem;
-  }
+
   .hero__slide--1 {
     background-image: url("../img/hero-320-first.jpg");
   }
@@ -194,7 +196,8 @@
     background-image: url("../img/hero-320-third.jpg");
   }
   .hero__container {
-    padding: 1.875rem 2rem 0 2rem;
+    padding-top: 30px;
+    padding-bottom: 50px;
     text-align: center;
   }
   .hero__title {
@@ -204,7 +207,8 @@
     line-height: 2.375rem;
   }
   .hero__text {
-    margin: 0 auto;
+    width: 283px;
+    padding-left: 8px;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1rem;

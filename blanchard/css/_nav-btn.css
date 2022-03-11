@@ -12,17 +12,18 @@
 .nav-btn::before {
   content: "";
   position: absolute;
-  top: calc(50% - 7px / 2);
+  top: calc(50% - 14px / 2);
   width: 7px;
   height: 7px;
   transform: rotate(45deg);
   transform-origin: center;
+
 }
 .nav-btn--disabled {
   background-color: #666;
 }
 .nav-btn--next::before {
-  left: calc(50% - 7px / 2);
+  left: calc(50% - 16px / 2);
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
 }
@@ -51,30 +52,38 @@
   height: 12px;
 }
 
-.nav-btn--first:hover {
-  background-color: var(--violet-dark);
-}
-.nav-btn--first:active {
-  border: 2px solid var(--dark);
-  background-color: var(--violet-light);
-}
-.nav-btn--first:focus-visible {
-  background-color: #666;
-  border: 2px solid var(--dark);
-
-}
-
+.nav-btn--first:hover,
 .nav-btn--second:hover {
   background-color: var(--violet-super-light);
 }
-
-.nav-btn--second:active {
+.nav-btn--second:active,
+.nav-btn--first:active {
   border: 2px solid var(--violet-dark);
   background-color: var(--violet-super-light);
 }
 
-.nav-btn--second:focus-visible {
-  background-color: #ECECEC;
+.nav-btn--second:focus-visible,
+.nav-btn--first:focus-visible {
+  outline: none;
+  background-color: rgba(236, 236, 236, 1);
   border: 2px solid var(--violet-dark);
+}
 
+.nav-btn--first::before {
+  top: calc(50% - 7px / 2);
+  left: calc(50% - 4px / 2);
+}
+
+.nav-btn--second::before {
+  top: calc(50% - 7px / 2);
+  left: calc(50% - 10px / 2);
+}
+
+.swiper-button-disabled.nav-btn--first,
+.swiper-button-disabled.nav-btn--second {
+  background-color: rgba(236, 236, 236, 1);
+}
+.swiper-button-disabled.nav-btn--first::before,
+.swiper-button-disabled.nav-btn--second::before {
+  border-color: rgba(187, 187, 187, 1);
 }

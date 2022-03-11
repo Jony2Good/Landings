@@ -3,7 +3,7 @@
   padding-bottom: 4.438rem;
 }
 
-.title__about {
+.about__title {
   margin-bottom: 0.938rem;
 }
 
@@ -18,9 +18,9 @@
 }
 @media (max-width: 610px) {
   .about {
-    padding: 3rem 0.2rem 2.3rem 0.2rem;
+    padding: 51px 3px 39px 1px;
   }
-  .title__about {
+  .about__title {
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;

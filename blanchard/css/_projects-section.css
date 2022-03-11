@@ -1,18 +1,18 @@
 .projects {
-  margin-bottom: 4.75rem;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 .projects__text {
   position: relative;
-  max-width: 67.5rem;
-  padding-right: 1.563rem;
-  margin-bottom: 1.25rem;
+  max-width: 1080px;
+  margin-bottom: 20px;
   font-size: 1rem;
   line-height: 2rem;
 }
 
 .projects__title {
-  margin-bottom: 0.875rem;
+  margin-bottom: 16px;
 }
 
 .tooltip-icon {
@@ -61,14 +61,20 @@
   font-size: 0.313rem;
 }
 
-.tippy-box[data-theme~="tomato"] {
+.tippy-box[data-theme~="toltip-content"] {
+  padding: 8px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 0;
   background-color: var(--violet-dark);
   color: #fff;
-  border-radius: 0;
-  line-height: 1rem;
 }
 
-.tippy-box[data-theme~="tomato"][data-placement^="top"] > .tippy-arrow::before {
+.tippy-box[data-theme~="toltip-content"][data-placement^="top"]
+  > .tippy-arrow::before {
   border-top-color: var(--violet-dark);
 }
 
@@ -88,6 +94,7 @@
 .projects__link:focus {
   padding: 0 0.313rem;
   background-color: var(--violet-dark);
+  outline: none;
   color: #fff;
 }
 
@@ -98,7 +105,7 @@
 
 .projects__sub-title {
   margin: 0;
-  margin-bottom: 1.75rem;
+  margin-bottom: 23px;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -133,7 +140,7 @@
   -ms-flex-align: center;
   align-items: center;
   height: 9.375rem;
-  padding: 2rem 3.75rem;
+  padding: 42px 60px 28px 60px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #cacaca;
@@ -178,7 +185,8 @@
   }
 
   .projects {
-    margin-bottom: 5rem;
+    padding-top: 33px;
+    padding-bottom: 80px;
 }
 
   .projects-slider__slider {
@@ -214,11 +222,11 @@
 
 @media (max-width: 970px) {
   .projects-container {
-    padding-right: 2.625rem;
+    padding-right: 41px;
   }
   .projects__slide {
-    height: 6.625rem;
-    padding: 0.938rem 1.5rem;
+    height: 106px;
+    padding: 15px 24px;
   }
 
   .projects-slider__slider {
@@ -226,17 +234,13 @@
   }
 
   .projects__text {
-    margin-bottom: 0;
+    margin-bottom: 28px;
   }
-  .projects__subtitle {
-    margin-bottom: 1.938rem;
+  .projects__sub-title {
+    margin-bottom: 28px;
   }
   .projects__link {
-    display: block;
-  }
-  .projects__slide {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+    display: inline-block;
   }
   .projects__swiper-prev,
   .projects__swiper-next {
@@ -245,23 +249,24 @@
 }
 
 @media (max-width: 640px) {
+  .projects {
+    padding-top: 20px;
+    padding-bottom: 13px;
+}
   .projects-container {
     padding-right: 0.938rem;
   }
   .projects__slide {
     height: 4.063rem;
-    padding: 1.25rem 2.75rem;
+    padding: 10px 44px 10px 44px;
   }
 
   .projects-slider__slider {
     width: calc(195 / 290 * 100%);
   }
 
-  .projects {
-    margin-bottom: 1.6rem;
-  }
   .projects__title {
-    margin-bottom: 0.875rem;
+    margin-bottom: 11px;
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
@@ -271,7 +276,7 @@
     margin-bottom: 0.5rem;
   }
   .projects__sub-title {
-    margin-bottom: 0.688rem;
+    margin-bottom: 13px;
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;

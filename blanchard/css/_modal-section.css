@@ -1,4 +1,5 @@
-.popup__bg {
+.popup-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,13 +13,10 @@
   transition: 0.5s all;
   z-index: 100;
 }
-
-.popup__bg.active {
-  opacity: 1;
-  pointer-events: all;
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
+.graph-modal__container {
+  max-width: 900px;
+  padding: 0;
+  border-radius: unset;
 }
 
 .popup {
@@ -43,23 +41,14 @@
   z-index: 1000;
 }
 
-.popup.active {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  -ms-transform: translate(-50%, -50%) scale(1);
-  transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  transition: 0.5s all;
-}
-
-.popup__picture,
-.popup__img {
+.popup-picture,
+.popup-img {
+  display: block;
   height: 100%;
   max-width: 400px;
   width: 100%;
 }
-
-.popup__close {
+.popup-close {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
@@ -70,30 +59,7 @@
   background-color: transparent;
 }
 
-.popup__close::before,
-.popup__close::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 0.813rem;
-  height: 1px;
-  background-color: #000;
-}
-
-.popup__close::before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.popup__close::after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.popup__descr {
+.popup-descr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,33 +76,43 @@
   padding-right: 2.188rem;
 }
 
-.popup__art {
+.popup-art {
   margin: 0;
   margin-bottom: 0.313rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.popup__painting {
+.popup-painting {
   margin: 0;
   font-weight: 600;
   font-size: 1rem;
 }
 
-.popup__years {
+.popup-years {
   margin-bottom: 2.563rem;
   font-size: 0.75rem;
   color: #969696;
 }
 
-.popup__caption {
+.popup-caption {
   margin: 0;
   max-width: 400px;
   line-height: 2rem;
 }
+.popup-close:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  .graph-modal__container {
+    max-width: 594px;
+    height: auto;
+  }
+}
 
 @media (max-width: 970px) {
-  .popup__bg {
+  .popup-container {
     padding-left: 0.938rem;
     padding-right: 0.938rem;
   }
@@ -156,8 +132,8 @@
     -ms-flex-align: center;
     align-items: center;
   }
-  .popup__picture,
-  .popup__img {
+  .popup-picture,
+  .popup-img {
     max-width: 100%;
     min-height: auto;
     -o-object-fit: cover;
@@ -165,13 +141,10 @@
     -o-object-position: bottom;
     object-position: bottom;
   }
-  .popup__picture {
-    margin-bottom: 1.063rem;
-  }
-  .popup__years {
+  .popup-years {
     margin-bottom: 0.75rem;
   }
-  .popup__descr {
+  .popup-descr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -188,10 +161,26 @@
     padding-right: 0.938rem;
   }
 
-  .popup__art,
-  .popup__painting,
-  .popup__years {
+  .popup-art,
+  .popup-painting,
+  .popup-years {
     line-height: 1.5rem;
     margin-bottom: 0;
+  }
+}
+@media (max-width: 610px) {
+  .graph-modal__container {
+    max-width: 290px;
+  }
+
+  .graph-modal__content {
+    flex-direction: column;
+  }
+  .popup-picture {
+    max-width: 290px;
+    margin-bottom: 17px;
+  }
+  .popup-descr {
+    padding-bottom: 20px;
   }
 }

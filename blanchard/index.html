@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     />
+    <link rel="stylesheet" href="frameworks/modal.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Blanchard - художественная галерея</title>
@@ -24,141 +25,110 @@
     <div class="top-wrapper">
       <header class="header">
         <div class="header__top">
-          <div class="header__container container flex">
-            <button
-              class="burger header__btn-open btn-reset js-burger"
-              aria-label="Кнопка открытия меню"
-            >
-              <span class="burger__line"></span>
-            </button>
-
-            <a href="#" class="header__logo">
-              <picture>
-                <source srcset="img/logo_320.svg" media="(max-width: 610px)" />
-                <source
-                  srcset="img/logo_1024.svg"
-                  media="(max-width: 1919px)" />
-                <img
-                  src="img/logo.svg"
-                  class="header__logo"
-                  alt="logotype" /></picture
-            ></a>
-
-            <div class="header__wrap flex">
-              <nav class="header__nav flex js-menu">
-                <button
-                  class="nav__close btn-reset"
-                  aria-label="Кнопка закрытия меню"
-                ></button>
-                <ul class="header__nav-list list-reset flex">
-                  <li class="header__nav-item">
-                    <a
-                      href="#about"
-                      class="header__nav-link link-hover js-menu-link js-scroll-link"
-                      ><span class="header__span">О&nbsp;нас</span></a
-                    >
-                  </li>
-                  <li class="header__nav-item">
-                    <a
-                      href="#gallery"
-                      class="header__nav-link link-hover js-menu-link js-scroll-link"
-                      ><span class="header__span">Галерея</span></a
-                    >
-                  </li>
-                  <li class="header__nav-item">
-                    <a
-                      href="#catalog"
-                      class="header__nav-link link-hover js-menu-link js-scroll-link"
-                      ><span class="header__span">Каталог</span></a
-                    >
-                  </li>
-                  <li class="header__nav-item">
-                    <a
-                      href="#events"
-                      class="header__nav-link link-hover js-menu-link js-scroll-link"
-                      ><span class="header__span">События</span></a
-                    >
-                  </li>
-                  <li class="header__nav-item">
-                    <a
-                      href="#projects"
-                      class="header__nav-link link-hover js-menu-link js-scroll-link"
-                      ><span class="header__span">Проекты</span></a
-                    >
-                  </li>
-                  <li class="header__nav-item">
-                    <a
-                      href="#contacts"
-                      class="header__nav-link link-hover js-menu-link js-scroll-link"
-                      ><span class="header__span">Контакты</span></a
-                    >
-                  </li>
-                </ul>
-
-                <a
-                  class="header__link link-hover"
-                  tabindex="0"
-                  role="button"
-                  aria-label="Кнопка входа на сайт"
-                >
-                  <svg
-                    class="header__account-arrow"
-                    width="18"
-                    height="13"
-                    viewBox="0 0 18 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <span class="header__span">Войти</span>
-                </a>
-              </nav>
-
+          <div class="header__container">
+            <div class="container container-header flex">
               <button
-                class="header__search-btn header__search-icon--open link-hover js-open-search"
-                type="button"
-                aria-label="Кнопка поиска информации"
+                class="burger header__btn-open btn-reset js-burger"
+                aria-label="Кнопка открытия меню"
               >
-                <svg
-                  class="header__span header__search-icon"
-                  width="23"
-                  height="22"
-                  viewBox="0 0 23 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    width="6.8678"
-                    height="1.71695"
-                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
-                    fill="currentColor"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                    fill="currentColor"
-                  />
-                </svg>
+                <span class="burger__line"></span>
               </button>
 
-              <form action="/" class="header__search js-form flex">
-                <input
-                  class="header__search-input"
-                  type="text"
-                  placeholder="Поиск по сайту"
-                />
+              <a class="header__logo">
+                <picture>
+                  <source
+                    srcset="img/logo_320.svg"
+                    media="(max-width: 610px)" />
+                  <source
+                    srcset="img/logo_1024.svg"
+                    media="(max-width: 1919px)" />
+                  <img
+                    src="img/logo.svg"
+                    class="header__logo"
+                    alt="logotype" /></picture
+              ></a>
+
+              <div class="header__wrap flex">
+                <nav class="header__nav flex js-menu">
+                  <button
+                    class="nav-close btn-reset"
+                    aria-label="Кнопка закрытия меню"
+                  ></button>
+                  <ul class="header__nav-list list-reset flex">
+                    <li class="header__nav-item">
+                      <a
+                        href="#about"
+                        class="header__nav-link link-hover js-menu-link js-scroll-link"
+                        ><span class="header__span">О&nbsp;нас</span></a
+                      >
+                    </li>
+                    <li class="header__nav-item">
+                      <a
+                        href="#gallery"
+                        class="header__nav-link link-hover js-menu-link js-scroll-link"
+                        ><span class="header__span">Галерея</span></a
+                      >
+                    </li>
+                    <li class="header__nav-item">
+                      <a
+                        href="#catalog"
+                        class="header__nav-link link-hover js-menu-link js-scroll-link"
+                        ><span class="header__span">Каталог</span></a
+                      >
+                    </li>
+                    <li class="header__nav-item">
+                      <a
+                        href="#events"
+                        class="header__nav-link link-hover js-menu-link js-scroll-link"
+                        ><span class="header__span">События</span></a
+                      >
+                    </li>
+                    <li class="header__nav-item">
+                      <a
+                        href="#projects"
+                        class="header__nav-link link-hover js-menu-link js-scroll-link"
+                        ><span class="header__span">Проекты</span></a
+                      >
+                    </li>
+                    <li class="header__nav-item">
+                      <a
+                        href="#contacts"
+                        class="header__nav-link link-hover js-menu-link js-scroll-link"
+                        ><span class="header__span">Контакты</span></a
+                      >
+                    </li>
+                  </ul>
+
+                  <a
+                    class="header__link link-hover"
+                    role="button"
+                    aria-label="Кнопка входа на сайт"
+                    tabindex="0"
+                  >
+                    <svg
+                      class="header__account-arrow"
+                      width="18"
+                      height="13"
+                      viewBox="0 0 18 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    <span class="header__span">Войти</span>
+                  </a>
+                </nav>
+
                 <button
-                  class="header__search-btn header__search-btn--open link-hover"
-                  type="submit"
+                  class="header__search-btn icon-open link-hover js-open-search"
+                  type="button"
                   aria-label="Кнопка поиска информации"
                 >
                   <svg
-                    class="header__span header-icon"
+                    class="header__span header__search-icon"
                     width="23"
                     height="22"
                     viewBox="0 0 23 22"
@@ -180,34 +150,69 @@
                   </svg>
                 </button>
 
-                <button
-                  class="header__search-btn header__search-btn--close link-hover js-close"
-                  type="button"
-                  aria-label="Кнопка закрытия поиска"
-                >
-                  <svg
-                    class="header__span header__search-icon--close"
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <form action="/" class="header__search js-form flex">
+                  <input
+                    class="header__search-input"
+                    type="text"
+                    placeholder="Поиск по сайту"
+                  />
+                  <button
+                    class="header__search-btn header__search-btn--open link-hover"
+                    type="submit"
+                    aria-label="Кнопка поиска информации"
                   >
-                    <rect
-                      width="29.567"
-                      height="2.9567"
-                      transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"
-                      fill="white"
-                    />
-                    <rect
-                      width="29.567"
-                      height="2.9567"
-                      transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"
-                      fill="white"
-                    />
-                  </svg>
-                </button>
-              </form>
+                    <svg
+                      class="header__span header-icon"
+                      width="23"
+                      height="22"
+                      viewBox="0 0 23 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="6.8678"
+                        height="1.71695"
+                        transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
+                        fill="currentColor"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+
+                  <button
+                    class="header__search-btn header__search-btn--close link-hover js-close"
+                    type="button"
+                    aria-label="Кнопка закрытия поиска"
+                  >
+                    <svg
+                      class="header__span icon-close"
+                      width="23"
+                      height="23"
+                      viewBox="0 0 23 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        width="29.567"
+                        height="2.9567"
+                        transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"
+                        fill="white"
+                      />
+                      <rect
+                        width="29.567"
+                        height="2.9567"
+                        transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
 
@@ -217,40 +222,36 @@
                 <li class="header__bottom-item">
                   <button
                     aria-label="Список художников реалистов"
-                    class="header__bottom-btn link-hover"
+                    class="header__bottom-btn link-hover js-header-dropdown-btn"
                     id="header__bottom-btn"
+                    data-path="one"
                   >
-                    <span
-                      class="header__bottom-link-text js-header-dropdown-btn"
-                      data-path="one"
-                      >Реализм</span
-                    >
+                    <span class="header__bottom-link-text">Реализм</span>
                   </button>
-
                   <ul
                     class="header__dropdown list-reset js-header-drop"
-                    data-simplebar
                     data-target="one"
+                    data-simplebar
                   >
                     <li
                       class="header__dropdown-item header__dropdown-item--tintoretto"
                     >
-                      <a class="header__dropdown-link" href="">Тинторетто</a>
+                      <a class="header__dropdown-link" href="#">Тинторетто</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--fridrih"
                     >
-                      <a class="header__dropdown-link" href="">Фридрих</a>
+                      <a class="header__dropdown-link" href="#">Фридрих</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--leonardo"
                     >
-                      <a class="header__dropdown-link" href="">Леонардо</a>
+                      <a class="header__dropdown-link" href="#">Леонардо</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--verrokko"
                     >
-                      <a class="header__dropdown-link" href="">Верроккьо</a>
+                      <a class="header__dropdown-link" href="#">Верроккьо</a>
                     </li>
                   </ul>
                 </li>
@@ -258,13 +259,10 @@
                 <li class="header__bottom-item">
                   <button
                     aria-label="Список художников импрессионистов"
-                    class="header__bottom-btn link-hover"
+                    class="header__bottom-btn link-hover js-header-dropdown-btn"
+                    data-path="two"
                   >
-                    <span
-                      class="header__bottom-link-text js-header-dropdown-btn"
-                      data-path="two"
-                      >Импрессионизм</span
-                    >
+                    <span class="header__bottom-link-text">Импрессионизм</span>
                   </button>
                   <ul
                     class="header__dropdown list-reset js-header-drop"
@@ -274,34 +272,33 @@
                     <li
                       class="header__dropdown-item header__dropdown-item--mone"
                     >
-                      <a class="header__dropdown-link" href="">Моне</a>
+                      <a class="header__dropdown-link" href="#">Моне</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--sislej"
                     >
-                      <a class="header__dropdown-link" href="">Сислей</a>
+                      <a class="header__dropdown-link" href="#">Сислей</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--mane"
                     >
-                      <a class="header__dropdown-link" href="">Мане</a>
+                      <a class="header__dropdown-link" href="#">Мане</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--renuar"
                     >
-                      <a class="header__dropdown-link" href="">Ренуар</a>
+                      <a class="header__dropdown-link" href="#">Ренуар</a>
                     </li>
                   </ul>
                 </li>
 
-                <li class="header__bottom-item layout-item">
+                <li class="header__bottom-item">
                   <button
                     aria-label="Список художников постимпрессионистов"
-                    class="header__bottom-btn link-hover"
+                    class="header__bottom-btn link-hover js-header-dropdown-btn"
+                    data-path="three"
                   >
-                    <span
-                      class="header__bottom-link-text js-header-dropdown-btn"
-                      data-path="three"
+                    <span class="header__bottom-link-text"
                       >Постимпрессионизм</span
                     >
                   </button>
@@ -313,35 +310,33 @@
                     <li
                       class="header__dropdown-item header__dropdown-item--vangog"
                     >
-                      <a class="header__dropdown-link" href="">Вангог</a>
+                      <a class="header__dropdown-link" href="#">Вангог</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--sezann"
                     >
-                      <a class="header__dropdown-link" href="">Сезанн</a>
+                      <a class="header__dropdown-link" href="#">Сезанн</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--gogen"
                     >
-                      <a class="header__dropdown-link" href="">Гоген</a>
+                      <a class="header__dropdown-link" href="#">Гоген</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--syora"
                     >
-                      <a class="header__dropdown-link" href="">Сёра</a>
+                      <a class="header__dropdown-link" href="#">Сёра</a>
                     </li>
                   </ul>
                 </li>
-                <li class="header__bottom-item layout-item">
+
+                <li class="header__bottom-item">
                   <button
                     aria-label="Список художников авангардистов"
-                    class="header__bottom-btn link-hover"
+                    class="header__bottom-btn link-hover js-header-dropdown-btn"
+                    data-path="four"
                   >
-                    <span
-                      class="header__bottom-link-text js-header-dropdown-btn"
-                      data-path="four"
-                      >Авангард</span
-                    >
+                    <span class="header__bottom-link-text">Авангард</span>
                   </button>
                   <ul
                     class="header__dropdown list-reset js-header-drop"
@@ -351,22 +346,22 @@
                     <li
                       class="header__dropdown-item header__dropdown-item--kandinskij"
                     >
-                      <a class="header__dropdown-link" href="">Кандинский</a>
+                      <a class="header__dropdown-link" href="#">Кандинский</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--marinetti"
                     >
-                      <a class="header__dropdown-link" href="">Маринетти</a>
+                      <a class="header__dropdown-link" href="#">Маринетти</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--malevich"
                     >
-                      <a class="header__dropdown-link" href="">Малевич</a>
+                      <a class="header__dropdown-link" href="#">Малевич</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--picasso"
                     >
-                      <a class="header__dropdown-link" href="">Пикассо</a>
+                      <a class="header__dropdown-link" href="#">Пикассо</a>
                     </li>
                   </ul>
                 </li>
@@ -374,13 +369,10 @@
                 <li class="header__bottom-item">
                   <button
                     aria-label="Список художников футуристов"
-                    class="header__bottom-btn link-hover"
+                    class="header__bottom-btn link-hover js-header-dropdown-btn"
+                    data-path="five"
                   >
-                    <span
-                      class="header__bottom-link-text js-header-dropdown-btn"
-                      data-path="five"
-                      >Футуризм</span
-                    >
+                    <span class="header__bottom-link-text">Футуризм</span>
                   </button>
                   <ul
                     class="header__dropdown list-reset js-header-drop"
@@ -390,22 +382,22 @@
                     <li
                       class="header__dropdown-item header__dropdown-item--karra"
                     >
-                      <a class="header__dropdown-link" href="">Карра</a>
+                      <a class="header__dropdown-link" href="#">Карра</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--pratella"
                     >
-                      <a class="header__dropdown-link" href="">Прателла</a>
+                      <a class="header__dropdown-link" href="#">Прателла</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--severeni"
                     >
-                      <a class="header__dropdown-link" href="">Северини</a>
+                      <a class="header__dropdown-link" href="#">Северини</a>
                     </li>
                     <li
                       class="header__dropdown-item header__dropdown-item--balla"
                     >
-                      <a class="header__dropdown-link" href="">Балла</a>
+                      <a class="header__dropdown-link" href="#">Балла</a>
                     </li>
                   </ul>
                 </li>
@@ -416,32 +408,26 @@
       </header>
 
       <section class="hero">
-        <div class="hero__container">
-          <h2 class="hero__title hero-title">
-            Прикоснитесь к&nbsp;прекрасному
-          </h2>
-          <p class="hero__text">
-            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация
-            намеченных плановых заданий создаёт предпосылки для новых
-            предложений.
-          </p>
-          <a class="hero__link btn--hover" href="#"
-            >Подписаться на&nbsp;рассылку</a
-          >
+        <div class="container">
+          <div class="hero__container">
+            <h2 class="hero__title hero-title">
+              Прикоснитесь к&nbsp;прекрасному
+            </h2>
+            <p class="hero__text">
+              Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация
+              намеченных плановых заданий создаёт предпосылки для новых
+              предложений.
+            </p>
+            <a class="hero__link" href="#">Подписаться на&nbsp;рассылку</a>
+          </div>
         </div>
       </section>
 
-      <div class="swiper swiper-container header__swiper-container">
-        <div class="swiper-wrapper header__swiper-wrapper">
-          <div
-            class="swiper-slide header__swiper-slide slide header__swiper-slide-1"
-          ></div>
-          <div
-            class="swiper-slide header__swiper-slide slide header__swiper-slide-2"
-          ></div>
-          <div
-            class="swiper-slide header__swiper-slide slide header__swiper-slide-3"
-          ></div>
+      <div class="swiper swiper-container swiper-top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide swiper-slide-1"></div>
+          <div class="swiper-slide slide swiper-slide-2"></div>
+          <div class="swiper-slide slide swiper-slide-3"></div>
         </div>
       </div>
     </div>
@@ -449,7 +435,7 @@
     <main class="main">
       <section class="about" id="about" aria-label="О нас">
         <div class="container about__container">
-          <h2 class="title__about sub-title">О нас</h2>
+          <h2 class="about__title sub-title">О нас</h2>
           <p class="about__text descr">
             Ясность нашей позиции очевидна: семантический разбор внешних
             противодействий однозначно определяет каждого участника как
@@ -475,7 +461,7 @@
               <h2 class="gallery__title sub-title">Галерея</h2>
               <span class="gallery__span-text descr">Фильтр:</span>
 
-              <div class="gallery__choices" tabindex="1">
+              <div class="gallery__choices" tabindex="0">
                 <select name="style" class="gallery__select" id="select">
                   <option selected>Живопись</option>
                   <option>Рисунок</option>
@@ -483,48 +469,45 @@
                 </select>
               </div>
 
-              <form action="#" method="post" class="form__content">
-                <label class="gallery__checkbox" tabindex="1">
+              <form action="#" method="post" class="form-content">
+                <label class="gallery__checkbox" tabindex="0">
                   <input type="checkbox" class="gallery__input" />
                   <span class="checkmark"></span>
-                  <span>XIX век</span>
+                  <span class="chek-text">XIX век</span>
                 </label>
-                <label class="gallery__checkbox" tabindex="1">
+                <label class="gallery__checkbox" tabindex="0">
                   <input
                     type="checkbox"
                     class="gallery__input"
                     checked="checked"
                   />
                   <span class="checkmark"></span>
-                  <span>XX век</span>
+                  <span class="chek-text">XX век</span>
                 </label>
-                <label class="gallery__checkbox" tabindex="1">
+                <label class="gallery__checkbox" tabindex="0">
                   <input type="checkbox" class="gallery__input" />
                   <span class="checkmark"></span>
-                  <span>Современность</span>
+                  <span class="chek-text">Современность</span>
                 </label>
               </form>
             </div>
 
             <div class="gallery__swiper gallery__swiper--layout">
-              <div class="gallery__nav swiper-navigation swiper-nav">
-                <div
-                  class="gallery__btn-prev test-prev swiper-button-prev prev"
-                  tabindex="1"
+              <div class="gallery__nav swiper-nav">
+                <button
+                  class="gallery__btn-prev swiper-button-prev prev"
                   aria-label="К предыдущему слайду"
-                ></div>
-                <div
-                  class="gallery__pagination swiper-pagination pagination"
-                ></div>
-                <div
-                  class="gallery__btn-next test-next swiper-button-next next"
-                  tabindex="1"
+                ></button>
+                <div class="gallery__pagination pagination"></div>
+                <button
+                  class="gallery__btn-next swiper-button-next next"
                   aria-label="К следующему слайду"
-                ></div>
+                ></button>
               </div>
+
               <div class="gallery__swiper-container swiper">
                 <div class="gallery__wrapper swiper-wrapper">
-                  <a class="swiper-slide gallery__slide">
+                  <a class="swiper-slide gallery__slide" href="#">
                     <picture>
                       <source
                         srcset="img/gallery-320-1.jpg"
@@ -545,7 +528,13 @@
                       />
                     </picture>
                   </a>
-                  <a class="swiper-slide gallery__slide">
+                  <a
+                    class="swiper-slide gallery__slide btn-modal"
+                    href="#"
+                    data-graph-path="first"
+                    data-graph-animation="fadeInUp"
+                    data-graph-speed="500"
+                  >
                     <picture>
                       <source
                         srcset="img/gallery-320-2.jpg"
@@ -566,7 +555,7 @@
                       />
                     </picture>
                   </a>
-                  <a class="swiper-slide gallery__slide">
+                  <a class="swiper-slide gallery__slide" href="#">
                     <picture>
                       <source
                         srcset="img/gallery-320-3.jpg"
@@ -587,7 +576,7 @@
                       />
                     </picture>
                   </a>
-                  <a class="swiper-slide gallery__slide">
+                  <a class="swiper-slide gallery__slide" href="#">
                     <picture>
                       <source
                         srcset="img/gallery-320-4.jpg"
@@ -608,7 +597,7 @@
                       />
                     </picture>
                   </a>
-                  <a class="swiper-slide gallery__slide">
+                  <a class="swiper-slide gallery__slide" href="#">
                     <picture>
                       <source
                         srcset="img/gallery-320-5.jpg"
@@ -629,7 +618,7 @@
                       />
                     </picture>
                   </a>
-                  <a class="swiper-slide gallery__slide">
+                  <a class="swiper-slide gallery__slide" href="#">
                     <picture>
                       <source
                         srcset="img/gallery-320-6.jpg"
@@ -656,29 +645,48 @@
           </div>
         </div>
 
-        <div class="popup__bg">
-          <div class="popup">
-            <div class="popup__picture">
-              <img class="popup__img" src="img/second-slide.jpg" alt="" />
-            </div>
-            <div class="popup__descr">
-              <button class="popup__close btn-reset"></button>
-              <h3 class="popup__art">Казимир Малевич</h3>
-              <h4 class="popup__painting">“Женщина с граблями”</h4>
-              <div class="popup__years">1931-1932</div>
-              <div class="popup__caption">
-                Картина из второй серии крестьянского цикла работ Казимира
-                Малевича. Художник принялся за её создание в 1930-1931 годах,
-                после того, как первый цикл был утерян после Берлинской и
-                Варшавской выставок в 1927 году.
+        <div class="graph-modal">
+          <div
+            class="graph-modal__container"
+            role="dialog"
+            aria-modal="true"
+            data-graph-target="first"
+          >
+            <button
+              class="btn-reset graph-modal__close popup-close"
+              aria-label="Закрыть модальное окно"
+            ></button>
+            <div class="graph-modal__content flex">
+              <picture class="popup-picture">
+                <source
+                  srcset="img/gallery-320-2.jpg"
+                  media="(max-width: 610px)"
+                />
+                <source srcset="img/modal-768.jpg" media="(max-width: 768px)" />
+                <source
+                  srcset="img/modal-1024.jpg"
+                  media="(max-width: 1024px)"
+                />
+                <img class="popup-img" src="img/second-slide.jpg" alt="" />
+              </picture>
+              <div class="popup-descr">
+                <h3 class="popup-art">Казимир Малевич</h3>
+                <h4 class="popup-painting">“Женщина с граблями”</h4>
+                <div class="popup-years">1931-1932</div>
+                <div class="popup-caption">
+                  Картина из второй серии крестьянского цикла работ Казимира
+                  Малевича. Художник принялся за её создание в 1930-1931 годах,
+                  после того, как первый цикл был утерян после Берлинской и
+                  Варшавской выставок в 1927 году.
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="catalog" class="catalog se">
-        <div class="container catalog__container">
+      <section id="catalog" class="catalog">
+        <div class="container">
           <div class="catalog__header">
             <h2 class="catalog__title section-title sub-title">Каталог</h2>
             <p class="catalog__text descr">
@@ -914,16 +922,18 @@
                   </button>
                   <div class="content ac-panel">
                     <div class="content-wrap">
-                      <div class="blank"><span></span></div>
-                      <div class="blank-info">
-                        <div class="blank-header">Здесь пока пусто</div>
-                        <p class="blank-text">
-                          А в галерее вы всегда можете найти что-то интересное
-                          для себя
-                        </p>
-                        <a href="#gallery" class="blank-link scroll-to"
-                          >В галерею</a
-                        >
+                      <div class="content-inner">
+                        <div class="blank"><span></span></div>
+                        <div class="blank-info">
+                          <div class="blank-header">Здесь пока пусто</div>
+                          <p class="blank-text">
+                            А в галерее вы всегда можете найти что-то интересное
+                            для себя
+                          </p>
+                          <a href="#gallery" class="blank-link scroll-to"
+                            >В галерею</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -956,16 +966,18 @@
                   </button>
                   <div class="content ac-panel">
                     <div class="content-wrap">
-                      <div class="blank"><span></span></div>
-                      <div class="blank-info">
-                        <div class="blank-header">Здесь пока пусто</div>
-                        <p class="blank-text">
-                          А в галерее вы всегда можете найти что-то интересное
-                          для себя
-                        </p>
-                        <a href="#gallery" class="blank-link scroll-to"
-                          >В галерею</a
-                        >
+                      <div class="content-inner">
+                        <div class="blank"><span></span></div>
+                        <div class="blank-info">
+                          <div class="blank-header">Здесь пока пусто</div>
+                          <p class="blank-text">
+                            А в галерее вы всегда можете найти что-то интересное
+                            для себя
+                          </p>
+                          <a href="#gallery" class="blank-link scroll-to"
+                            >В галерею</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -998,16 +1010,18 @@
                   </button>
                   <div class="content ac-panel">
                     <div class="content-wrap">
-                      <div class="blank"><span></span></div>
-                      <div class="blank-info">
-                        <div class="blank-header">Здесь пока пусто</div>
-                        <p class="blank-text">
-                          А в галерее вы всегда можете найти что-то интересное
-                          для себя
-                        </p>
-                        <a href="#gallery" class="blank-link scroll-to"
-                          >В галерею</a
-                        >
+                      <div class="content-inner">
+                        <div class="blank"><span></span></div>
+                        <div class="blank-info">
+                          <div class="blank-header">Здесь пока пусто</div>
+                          <p class="blank-text">
+                            А в галерее вы всегда можете найти что-то интересное
+                            для себя
+                          </p>
+                          <a href="#gallery" class="blank-link scroll-to"
+                            >В галерею</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1040,16 +1054,18 @@
                   </button>
                   <div class="content ac-panel">
                     <div class="content-wrap">
-                      <div class="blank"><span></span></div>
-                      <div class="blank-info">
-                        <div class="blank-header">Здесь пока пусто</div>
-                        <p class="blank-text">
-                          А в галерее вы всегда можете найти что-то интересное
-                          для себя
-                        </p>
-                        <a href="#gallery" class="blank-link scroll-to"
-                          >В галерею</a
-                        >
+                      <div class="content-inner">
+                        <div class="blank"><span></span></div>
+                        <div class="blank-info">
+                          <div class="blank-header">Здесь пока пусто</div>
+                          <p class="blank-text">
+                            А в галерее вы всегда можете найти что-то интересное
+                            для себя
+                          </p>
+                          <a href="#gallery" class="blank-link scroll-to"
+                            >В галерею</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1082,16 +1098,18 @@
                   </button>
                   <div class="content ac-panel">
                     <div class="content-wrap">
-                      <div class="blank"><span></span></div>
-                      <div class="blank-info">
-                        <div class="blank-header">Здесь пока пусто</div>
-                        <p class="blank-text">
-                          А в галерее вы всегда можете найти что-то интересное
-                          для себя
-                        </p>
-                        <a href="#gallery" class="blank-link scroll-to"
-                          >В галерею</a
-                        >
+                      <div class="content-inner">
+                        <div class="blank"><span></span></div>
+                        <div class="blank-info">
+                          <div class="blank-header">Здесь пока пусто</div>
+                          <p class="blank-text">
+                            А в галерее вы всегда можете найти что-то интересное
+                            для себя
+                          </p>
+                          <a href="#gallery" class="blank-link scroll-to"
+                            >В галерею</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1124,16 +1142,18 @@
                   </button>
                   <div class="content ac-panel">
                     <div class="content-wrap">
-                      <div class="blank"><span></span></div>
-                      <div class="blank-info">
-                        <div class="blank-header">Здесь пока пусто</div>
-                        <p class="blank-text">
-                          А в галерее вы всегда можете найти что-то интересное
-                          для себя
-                        </p>
-                        <a href="#gallery" class="blank-link scroll-to"
-                          >В галерею</a
-                        >
+                      <div class="content-inner">
+                        <div class="blank"><span></span></div>
+                        <div class="blank-info">
+                          <div class="blank-header">Здесь пока пусто</div>
+                          <p class="blank-text">
+                            А в галерее вы всегда можете найти что-то интересное
+                            для себя
+                          </p>
+                          <a href="#gallery" class="blank-link scroll-to"
+                            >В галерею</a
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1145,7 +1165,7 @@
       </section>
 
       <section id="events" class="events">
-        <div class="container container-events">
+        <div class="container">
           <h2 class="sub-title events__title">События</h2>
 
           <div class="events__slider-wrap events-slider">
@@ -1196,7 +1216,7 @@
                         href="#"
                         class="events__descr-link link-hover"
                         aria-label="Кнопка раскрытия информации"
-                        ><span class="header__span">Подробнее</span></a
+                        ><span class="events-span">Подробнее</span></a
                       >
                     </div>
                   </div>
@@ -1228,8 +1248,9 @@
                       24 марта 19:00
                     </p>
                     <div class="events__descr">
-                      <h3 class="events__descr-title events__descr--layout">
-                        «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                      <h3 class="events__descr-title events-layout">
+                        «Открытая дискуссия». Дмитрий Петров и&nbsp;Сергей
+                        Ильин.
                       </h3>
                       <p class="events__descr-article">
                         Высокий уровень вовлечения представителей целевой
@@ -1242,7 +1263,7 @@
                         href="#"
                         class="events__descr-link link-hover"
                         aria-label="Кнопка раскрытия информации"
-                        ><span class="header__span">Подробнее</span></a
+                        ><span class="events-span">Подробнее</span></a
                       >
                     </div>
                   </div>
@@ -1268,13 +1289,13 @@
                       alt="обложка карточки"
                     />
                   </picture>
-                  <div class="events__content">
+                  <div class="events__content events-content">
                     <p class="events__text">
                       Еврейский музей <br />
                       с 31 марта по 21 апреля
                     </p>
-                    <div class="events__descr events__descr--pr">
-                      <h3 class="events__descr-title events__descr--layout">
+                    <div class="events__descr">
+                      <h3 class="events__descr-title events-layout">
                         Выставка «Формация 2020»
                       </h3>
                       <p class="events__descr-article">
@@ -1288,7 +1309,7 @@
                         href="#"
                         class="events__descr-link link-hover"
                         aria-label="Кнопка раскрытия информации"
-                        ><span class="header__span">Подробнее</span></a
+                        ><span class="events-span">Подробнее</span></a
                       >
                     </div>
                   </div>
@@ -1334,7 +1355,7 @@
                         href="#"
                         class="events__descr-link link-hover"
                         aria-label="Кнопка раскрытия информации"
-                        ><span class="header__span">Подробнее</span></a
+                        ><span class="events-span">Подробнее</span></a
                       >
                     </div>
                   </div>
@@ -1379,7 +1400,7 @@
                         href="#"
                         class="events__descr-link link-hover"
                         aria-label="Кнопка раскрытия информации"
-                        ><span class="header__span">Подробнее</span></a
+                        ><span class="events-span">Подробнее</span></a
                       >
                     </div>
                   </div>
@@ -1410,9 +1431,10 @@
             неузнаваемости, из-за чего возрастает их статус бесполезности.
             Прежде всего, постоянное информационно пропагандистское
             <button
-              class="tooltip-icon btn-reset"
+              class="tooltip-icon btn-reset js-tooltip-btn"
               id="tooltip-one"
               aria-label="показывающая подсказку"
+              data-tippy-content="Пример современных тенденций - современная методология разработки"
             >
               <svg
                 width="16"
@@ -1435,9 +1457,10 @@
             экономической целесообразности принимаемых решений. И нет сомнений,
             что действия представителей оппозиции могут быть рассмотрены
             <button
-              class="tooltip-icon btn-reset"
+              class="tooltip-icon btn-reset js-tooltip-btn"
               id="tooltip-two"
               aria-label="показывающая подсказку"
+              data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"
             >
               <svg
                 width="16"
@@ -1458,9 +1481,10 @@
             </button>
             исключительно в разрезе маркетинговых и финансовых
             <button
-              class="tooltip-icon btn-reset"
+              class="tooltip-icon btn-reset js-tooltip-btn"
               id="tooltip-three"
               aria-label="показывающая подсказку"
+              data-tippy-content="В стремлении повысить качество"
             >
               <svg
                 width="16"
@@ -1680,12 +1704,16 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <a href="#" class="footer__link">
+        <a class="footer__link">
           <img src="img/logo.svg" alt="Логотип Blanchard" />
         </a>
         <ul class="footer__list list-reset">
           <li class="footer__item">
-            <a href="#" class="footer__link-social">
+            <a
+              href="https://vk.com"
+              class="footer__link-social"
+              target="_blank"
+            >
               <svg
                 viewBox="0 0 45 45"
                 fill="none"
@@ -1699,7 +1727,11 @@
             </a>
           </li>
           <li class="footer__item">
-            <a href="#" class="footer__link-social">
+            <a
+              href="https://www.instagram.com"
+              class="footer__link-social"
+              target="_blank"
+            >
               <svg
                 viewBox="0 0 45 45"
                 fill="none"
@@ -1721,7 +1753,11 @@
             </a>
           </li>
           <li class="footer__item">
-            <a href="#" class="footer__link-social">
+            <a
+              href="https://ru-ru.facebook.com"
+              class="footer__link-social"
+              target="_blank"
+            >
               <svg
                 viewBox="0 0 45 45"
                 fill="none"
@@ -1747,7 +1783,7 @@
     <script src="frameworks/swiper-bundle.min.js"></script>
     <script src="frameworks/choices.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=2e0b52d3-843e-4b88-99ee-274d6e7ed5c4&lang=ru_RU"></script>
+    <script src="frameworks/modal.min.js"></script>
     <script src="scripts/main.js"></script>
-
   </body>
 </html>

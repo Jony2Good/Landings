@@ -10,8 +10,8 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 1.875rem;
-  margin-bottom: 1.938rem;
+  padding-top: 31px;
+  padding-bottom: 28px;
 }
 
 .contacts__address {
@@ -62,7 +62,7 @@
 }
 
 .contacts-form__input {
-  padding: 1.125rem 1.5rem 0.875rem 1.5rem;
+  padding: 14px 24px 17px 24px;
   min-width: 16.875rem;
   border-radius: 6.25rem;
   border: 1px solid #333;
@@ -197,7 +197,8 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 2.688rem 3.125rem;
+    padding-top: 43px;
+    padding-bottom: 43px;
   }
 
   .contacts-form {
@@ -214,7 +215,8 @@
 
 @media (max-width: 1024px) {
   .contacts__top {
-    padding-right: 2.5rem;
+    padding-right: 40px;
+    padding-bottom: 30px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -246,17 +248,16 @@
   .contacts__map {
     min-height: 43.75rem;
   }
-  .contacts__top {
-    padding-bottom: 0;
-  }
   .contacts__btn {
     padding: 0.781rem 2.563rem;
   }
 }
 
 @media (max-width: 768px) {
-  .contacts__address span {
-    margin-bottom: 0.313rem;
+  .contacts__top {
+    padding-right: 20px;
+    padding-top: 43px;
+    padding-bottom: 32px;
   }
   .contacts-form__input {
     min-width: 20.188rem;
@@ -265,22 +266,21 @@
   .contacts-form {
     margin-bottom: 1.563rem;
   }
-
-  .contacts__top {
-    padding-right: 0.625rem;
-  }
-
   .contacts-form__input {
-    padding: 1.125rem 1.5rem 0.688rem 1.5rem;
+    padding: 18px 24px 11px 24px;
   }
   .contacts__btn {
     padding: 0.781rem 1.688rem;
   }
   .contacts-form__validation {
-    margin-bottom: 0.75rem;
+    margin-bottom: 14px;
+    margin-right: 20px;
   }
-
- }
+  .just-validate-error-label {
+    top: auto;
+    transform: translateY(-66px);
+  }
+}
 
 @media (max-width: 576px) {
   .contacts__top {
@@ -308,7 +308,7 @@
     border: none;
   }
   .contacts__text {
-    font-size: 1.125rem;
+    font-size: 17px;
     margin-bottom: 1.313rem;
   }
   .contacts__text:nth-child(2n) {
@@ -328,6 +328,9 @@
 }
 
 @media (max-width: 320px) {
+  .contacts {
+    padding-top: 13px;
+  }
   .contacts-form {
     margin-bottom: 0.938rem;
   }
@@ -337,7 +340,7 @@
 
   .contacts__top {
     margin-bottom: 0;
-    padding-bottom: 0.625rem;
+    padding-bottom: 9px;
   }
   .contacts__btn {
     overflow: hidden;
@@ -378,5 +381,9 @@
   }
   .contacts-form__validation {
     margin-bottom: 1.188rem;
+  }
+  .just-validate-error-label {
+    top: auto;
+    transform: translateY(-58px);
   }
 }

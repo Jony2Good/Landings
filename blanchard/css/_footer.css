@@ -1,7 +1,7 @@
 .footer {
-  padding-top: 2.875rem;
-  padding-bottom: 2.688rem;
-  background-color: var(--dark);
+  padding-top: 47px;
+  padding-bottom: 38px;
+  background-color:#000;
 }
 
 .footer__container {
@@ -72,7 +72,7 @@
 
 @media (max-width: 1024px) {
   .footer {
-    padding: 2.563rem 0 1.938rem 0;
+    padding: 41px 0 31px 0;
   }
 }
 

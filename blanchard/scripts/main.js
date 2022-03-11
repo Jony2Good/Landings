@@ -174,6 +174,53 @@ window.TABLET_WIDTH = TABLET_WIDTH;
 
 // header dropdown
 
+// const params = {
+//   btnClassName: "js-header-dropdown-btn",
+//   dropClassName: "js-header-drop",
+//   activeClassName: "is-active",
+//   disabledClassName: "is-disabled"
+// }
+
+// function onDisable(evt) {
+//   if (evt.target.classList.contains(params.disabledClassName)) {
+//     evt.target.classList.remove(params.disabledClassName, params.activeClassName);
+//     evt.target.removeEventListener("animationend", onDisable);
+//   }
+// }
+
+//   function setMenuListener() {
+//     document.body.addEventListener("click", (evt) => {
+//       const activeElements = document.querySelectorAll(`.${params.btnClassName}.${params.activeClassName}, .${params.dropClassName}.${params.activeClassName}`);
+
+//       if (activeElements.length && !evt.target.closest(`.${params.activeClassName}`)) {
+//         activeElements.forEach((current) => {
+//           if (current.classList.contains(params.btnClassName)) {
+//             current.classList.remove(params.activeClassName);
+//           } else {
+//             current.classList.add(params.disabledClassName);
+//           }
+//         });
+//       }
+
+//       if (evt.target.closest(`.${params.btnClassName}`)) {
+//         const btn = evt.target.closest(`.${params.btnClassName}`);
+//         const path = btn.dataset.path;
+//         const drop = document.querySelector(`.${params.dropClassName}[data-target="${path}"]`);
+
+//         btn.classList.toggle(params.activeClassName);
+
+//         if (!drop.classList.contains(params.activeClassName)) {
+//           drop.classList.add(params.activeClassName);
+//           drop.addEventListener("animationend", onDisable);
+//         } else {
+//           drop.classList.add(params.disabledClassName);
+//         }
+//       }
+//     });
+//   }
+
+// setMenuListener();
+
 const params = {
   btnClassName: "js-header-dropdown-btn",
   dropClassName: "js-header-drop",
@@ -222,6 +269,7 @@ function onDisable(evt) {
 setMenuListener();
 
 
+
 // swiper hero
 
 const swiper = new Swiper('.swiper-container', {
@@ -254,8 +302,8 @@ const swiper = new Swiper('.swiper-container', {
         type: 'fraction',
       },
       navigation: {
-        nextEl: '.test-next',
-        prevEl: '.test-prev',
+        nextEl: '.gallery__btn-next',
+        prevEl: '.gallery__btn-prev',
       },
       a11y: {
         prevSlideMessage: 'Предыдущие слайды',
@@ -279,7 +327,15 @@ const swiper = new Swiper('.swiper-container', {
           },
           spaceBetween: 15,
         },
-        640: {
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          grid: {
+            rows: 1,
+          },
+          spaceBetween: 38,
+        },
+        1024: {
           slidesPerView: 2,
           slidesPerGroup: 2,
           grid: {
@@ -301,40 +357,7 @@ const swiper = new Swiper('.swiper-container', {
 
     });
 
-  // modal section
-
-  let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
-  let popup = document.querySelector('.popup'); // Само окно
-  let openPopupButtons = document.querySelectorAll('.gallery__slide'); // Кнопки для показа окна
-  let closePopupButton = document.querySelector('.popup__close'); // Кнопка для скрытия окна
-  let galleryImg = document.querySelectorAll('.gallery__slide-img');// картинки
-  let popupPicture = document.querySelector('.popup__picture');
-  let popupImg = document.querySelector('.popup__img');
-  openPopupButtons.forEach((button) => { // Перебираем все кнопки
-    button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
-      popupBg.classList.add('active'); // Добавляем класс 'active' для фона
-      popup.classList.add('active'); // И для самого окна
-      let src = button.querySelector('.gallery__slide-img').getAttribute("src");
-      document.querySelector(".popup").querySelector(".popup__img").setAttribute("src", src);
-      document.body.style.overflow = 'hidden'
-    })
-  });
-
-  closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
-    popupBg.classList.remove('active'); // Убираем активный класс с фона
-    popup.classList.remove('active'); // И с окна
-    document.body.style.overflow = 'visible'
-  });
-
-  document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
-    if (e.target === popupBg) { // Если цель клика - фото, то:
-      popupBg.classList.remove('active'); // Убираем активный класс с фона
-      popup.classList.remove('active'); // И с окна
-    }
-  });
-
-
-// accordion section
+  // accordion section
 
     (() => {
       new Accordion(".js-accordion-container", {
@@ -427,31 +450,13 @@ const swiper = new Swiper('.swiper-container', {
 
 
  // tooltip
- tippy('#tooltip-one', {
-  content: '<p style="max-height: 40px; text-align: center; font-size: 12px; font-weight: 600;">Пример современных тенденций - современная методология разработки </p>',
-  maxWidth: 264,
-  allowHTML: true,
-  arrow: true,
-  theme: 'tomato',
-  duration: 500,
-});
 
-tippy('#tooltip-two', {
-  content: '<p style="min-height: 55px; text-align: center; font-size: 12px; font-weight: 600;">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  </p>',
-  maxWidth: 264,
+ tippy('.js-tooltip-btn', {
+  theme: 'toltip-content',
   allowHTML: true,
+  maxWidth: 280,
   arrow: true,
-  theme: 'tomato',
-  duration: 500,
-});
-
-tippy('#tooltip-three', {
-  content: '<p style="min-height: 25px; text-align: center; font-size: 12px; font-weight: 600;">В стремлении повысить качество </p>',
-  minWidth: 264,
-  allowHTML: true,
-  arrow: true,
-  theme: 'tomato',
-  duration: 500,
+  duration: 50
 });
 
 
@@ -579,8 +584,6 @@ validation
   ])
 
 
-
-
-
-
-
+  document.querySelector('.btn-modal').addEventListener('click', () => {
+    new GraphModal().open('first');
+  });
