@@ -83,6 +83,13 @@
                         ><span class="header__span">События</span></a
                       >
                     </li>
+                    <li class="header__nav-item header__nav-hidden">
+                      <a
+                        href="#events"
+                        class="header__nav-link link-hover js-menu-link js-scroll-link"
+                        ><span class="header__span">Издания</span></a
+                      >
+                    </li>
                     <li class="header__nav-item">
                       <a
                         href="#projects"
@@ -150,7 +157,12 @@
                   </svg>
                 </button>
 
-                <form action="/" class="header__search js-form flex">
+                <form
+                  action="https://jsonplaceholder.typicode.com/posts"
+                  autocomplete="on"
+                  method="POST"
+                  class="header__search js-form flex"
+                >
                   <input
                     class="header__search-input"
                     type="text"
@@ -228,32 +240,52 @@
                   >
                     <span class="header__bottom-link-text">Реализм</span>
                   </button>
-                  <ul
-                    class="header__dropdown list-reset js-header-drop"
+
+                  <div
+                    class="header__dropdown js-header-drop"
                     data-target="one"
-                    data-simplebar
                   >
-                    <li
-                      class="header__dropdown-item header__dropdown-item--tintoretto"
-                    >
-                      <a class="header__dropdown-link" href="#">Тинторетто</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--fridrih"
-                    >
-                      <a class="header__dropdown-link" href="#">Фридрих</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--leonardo"
-                    >
-                      <a class="header__dropdown-link" href="#">Леонардо</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--verrokko"
-                    >
-                      <a class="header__dropdown-link" href="#">Верроккьо</a>
-                    </li>
-                  </ul>
+                    <div class="header__dropdown-wrap" data-simplebar>
+                      <ul class="header__dropdown-list list-reset">
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--tintoretto"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Тинторетто</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--fridrih"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Фридрих</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--leonardo"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Леонардо</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--verrokko"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Верроккьо</span
+                            ></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
 
                 <li class="header__bottom-item">
@@ -264,32 +296,48 @@
                   >
                     <span class="header__bottom-link-text">Импрессионизм</span>
                   </button>
-                  <ul
-                    class="header__dropdown list-reset js-header-drop"
-                    data-simplebar
+
+                  <div
+                    class="header__dropdown js-header-drop"
                     data-target="two"
                   >
-                    <li
-                      class="header__dropdown-item header__dropdown-item--mone"
-                    >
-                      <a class="header__dropdown-link" href="#">Моне</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--sislej"
-                    >
-                      <a class="header__dropdown-link" href="#">Сислей</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--mane"
-                    >
-                      <a class="header__dropdown-link" href="#">Мане</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--renuar"
-                    >
-                      <a class="header__dropdown-link" href="#">Ренуар</a>
-                    </li>
-                  </ul>
+                    <div class="header__dropdown-wrap" data-simplebar>
+                      <ul class="header__dropdown-list list-reset">
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--mone"
+                            href="#"
+                            ><span class="header__dropdown-text">Моне</span></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--sislej"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Сислей</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--mane"
+                            href="#"
+                            ><span class="header__dropdown-text">Мане</span></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--renuar"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Ренуар</span
+                            ></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
 
                 <li class="header__bottom-item">
@@ -302,32 +350,48 @@
                       >Постимпрессионизм</span
                     >
                   </button>
-                  <ul
-                    class="header__dropdown list-reset js-header-drop"
-                    data-simplebar
+
+                  <div
+                    class="header__dropdown js-header-drop"
                     data-target="three"
                   >
-                    <li
-                      class="header__dropdown-item header__dropdown-item--vangog"
-                    >
-                      <a class="header__dropdown-link" href="#">Вангог</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--sezann"
-                    >
-                      <a class="header__dropdown-link" href="#">Сезанн</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--gogen"
-                    >
-                      <a class="header__dropdown-link" href="#">Гоген</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--syora"
-                    >
-                      <a class="header__dropdown-link" href="#">Сёра</a>
-                    </li>
-                  </ul>
+                    <div class="header__dropdown-wrap" data-simplebar>
+                      <ul class="header__dropdown-list list-reset">
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--vangog"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Вангог</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--sezann"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Сезанн</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--gogen"
+                            href="#"
+                            ><span class="header__dropdown-text">Гоген</span></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--syora"
+                            href="#"
+                            ><span class="header__dropdown-text">Сёра</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
 
                 <li class="header__bottom-item">
@@ -338,32 +402,52 @@
                   >
                     <span class="header__bottom-link-text">Авангард</span>
                   </button>
-                  <ul
-                    class="header__dropdown list-reset js-header-drop"
-                    data-simplebar
+
+                  <div
+                    class="header__dropdown js-header-drop"
                     data-target="four"
                   >
-                    <li
-                      class="header__dropdown-item header__dropdown-item--kandinskij"
-                    >
-                      <a class="header__dropdown-link" href="#">Кандинский</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--marinetti"
-                    >
-                      <a class="header__dropdown-link" href="#">Маринетти</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--malevich"
-                    >
-                      <a class="header__dropdown-link" href="#">Малевич</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--picasso"
-                    >
-                      <a class="header__dropdown-link" href="#">Пикассо</a>
-                    </li>
-                  </ul>
+                    <div class="header__dropdown-wrap" data-simplebar>
+                      <ul class="header__dropdown-list list-reset">
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--kandinskij"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Кандинский</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--marinetti"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Маринетти</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--malevich"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Малевич</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--picasso"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Пикассо</span
+                            ></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
 
                 <li class="header__bottom-item">
@@ -374,32 +458,48 @@
                   >
                     <span class="header__bottom-link-text">Футуризм</span>
                   </button>
-                  <ul
-                    class="header__dropdown list-reset js-header-drop"
-                    data-simplebar
+
+                  <div
+                    class="header__dropdown js-header-drop"
                     data-target="five"
                   >
-                    <li
-                      class="header__dropdown-item header__dropdown-item--karra"
-                    >
-                      <a class="header__dropdown-link" href="#">Карра</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--pratella"
-                    >
-                      <a class="header__dropdown-link" href="#">Прателла</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--severeni"
-                    >
-                      <a class="header__dropdown-link" href="#">Северини</a>
-                    </li>
-                    <li
-                      class="header__dropdown-item header__dropdown-item--balla"
-                    >
-                      <a class="header__dropdown-link" href="#">Балла</a>
-                    </li>
-                  </ul>
+                    <div class="header__dropdown-wrap" data-simplebar>
+                      <ul class="header__dropdown-list list-reset">
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--karra"
+                            href="#"
+                            ><span class="header__dropdown-text">Карра</span></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--pratella"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Прателла</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--severeni"
+                            href="#"
+                            ><span class="header__dropdown-text"
+                              >Северини</span
+                            ></a
+                          >
+                        </li>
+                        <li class="header__dropdown-item">
+                          <a
+                            class="header__dropdown-link header__dropdown-link--balla"
+                            href="#"
+                            ><span class="header__dropdown-text">Балла</span></a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -699,9 +799,13 @@
               независимые элементы.
             </p>
           </div>
+
           <div class="catalog__inner flex">
-            <div class="catalog__card catalog__author">
-              <div class="catalog__author-pic">
+            <div class="catalog__card">
+              <div
+                class="catalog__author-pic tab-active js-tab-content"
+                data-painter-content="domeniko"
+              >
                 <picture class="catalog__img">
                   <source
                     srcset="img/catalog_img-320.jpg"
@@ -721,32 +825,43 @@
                     alt="Доменико Гирландайо"
                   />
                 </picture>
+
+                <div class="catalog__author">
+                  <h3 class="author-title">Доменико Гирландайо</h3>
+                  <p class="author-descr">
+                    <span class="author-birthday"
+                      >2 июня 1448 — 11 января 1494.</span
+                    ><br />
+                    Один из ведущих флорентийских художников Кватроченто,
+                    основатель художественной династии, которую продолжили его
+                    брат Давид и сын Ридольфо. Глава художественной мастерской,
+                    где юный Микеланджело в течение года овладевал
+                    профессиональными навыками. Автор фресковых циклов, в
+                    которых выпукло, со всевозможными подробностями показана
+                    домашняя жизнь библейских персонажей (в их роли выступают
+                    знатные граждане Флоренции в костюмах того времени).
+                  </p>
+                </div>
               </div>
-              <div class="catalog__info Founded">
-                <h3 class="author-title">Доменико Гирландайо</h3>
-                <p class="author-descr">
-                  <span class="author-birthday"
-                    >2 июня 1448 — 11 января 1494.</span
-                  ><br />
-                  Один из ведущих флорентийских художников Кватроченто,
-                  основатель художественной династии, которую продолжили его
-                  брат Давид и сын Ридольфо. Глава художественной мастерской,
-                  где юный Микеланджело в течение года овладевал
-                  профессиональными навыками. Автор фресковых циклов, в которых
-                  выпукло, со всевозможными подробностями показана домашняя
-                  жизнь библейских персонажей (в их роли выступают знатные
-                  граждане Флоренции в костюмах того времени).
-                </p>
-              </div>
-              <div class="catalog__info notFounded" style="display: none">
-                <h3 class="author-title">Что мы о нём знаем?</h3>
-                <p class="author-descr">
+
+              <div
+                class="catalog__info catalog__author-pic js-tab-content"
+                data-painter-content="empty"
+              >
+                <img
+                  alt="Заглушка"
+                  class="catalog__info-card"
+                  src="img/art-none.jpg"
+                />
+                <h3 class="author-title author-txt">Что мы о нём знаем?</h3>
+                <p class="author-descr author-txt author-layout">
                   Пока ничего... Зато мы точно знаем, что в галерее есть на что
                   посмотреть!
                 </p>
                 <a href="#gallery" class="descr-link scroll-to">В галерею</a>
               </div>
             </div>
+
             <div class="catalog__accord">
               <ul class="list-reset js-accordion-container">
                 <li class="question ac js-enabled">
@@ -779,114 +894,194 @@
                     <div class="content-wrap">
                       <ul class="catalog__author-list list-reset">
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Бенедетто ди Биндо</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Бергоньоне, Амброджо</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Биссоло, Франческо</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Больтраффио, Джованни</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Бонсиньори, Франческо</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Боттичини, Рафаэлло</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link">Брамантино</a>
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
+                            >Брамантино</a
+                          >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Бреа, Людовико</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Бьяджо д’Антонио Туччи</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link">Веккьетта</a>
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
+                            >Веккьетта</a
+                          >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Андреа Верроккьо</a
                           >
                         </li>
                         <li class="catalog__author-item">
                           <a
                             href=""
-                            class="catalog__author-link active domeniko"
+                            class="catalog__author-link btn-active js-tab-btn"
+                            data-painter-btn="domeniko"
                             >Доменико Гирландайо</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Беноццо Гоццоли</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Граначчи, Франческо</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Грегорио ди Чекко</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Джованни да Удине</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Джованни ди Паоло</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link">Джорджоне</a>
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
+                            >Джорджоне</a
+                          >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Парентино, Бернардо</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link">Пезеллино</a>
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
+                            >Пезеллино</a
+                          >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Пьетро Перуджино</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Перуцци, Бальдассаре</a
                           >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link">Пизанелло</a>
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
+                            >Пизанелло</a
+                          >
                         </li>
                         <li class="catalog__author-item">
-                          <a href="" class="catalog__author-link"
+                          <a
+                            href=""
+                            class="catalog__author-link js-tab-btn"
+                            data-painter-btn="empty"
                             >Пинтуриккьо</a
                           >
                         </li>
@@ -1201,24 +1396,21 @@
                     <p class="events__text">
                       Музей им. Щусева<br />с 20 марта по 30 апреля
                     </p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">
-                        Книжная гравюра в живом восприятии
-                      </h3>
-                      <p class="events__descr-article">
-                        Один из ведущих флорентийских художников Кватроченто,
-                        основатель художественной династии, которую продолжили
-                        его брат Давид и сын Ридольфо.
-                      </p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a
-                        href="#"
-                        class="events__descr-link link-hover"
-                        aria-label="Кнопка раскрытия информации"
-                        ><span class="events-span">Подробнее</span></a
-                      >
-                    </div>
+                    <h3 class="events__descr events__descr-title">
+                      Книжная гравюра в живом восприятии
+                    </h3>
+                    <p class="events__descr-article">
+                      Один из ведущих флорентийских художников Кватроченто,
+                      основатель художественной династии, которую продолжили его
+                      брат Давид и сын Ридольфо.
+                    </p>
+
+                    <a
+                      href="#"
+                      class="events__descr-btn events__descr-link link-hover"
+                      aria-label="Кнопка раскрытия информации"
+                      ><span class="events-span">Подробнее</span></a
+                    >
                   </div>
                 </li>
 
@@ -1247,25 +1439,20 @@
                       ММОМА <br />
                       24 марта 19:00
                     </p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title events-layout">
-                        «Открытая дискуссия». Дмитрий Петров и&nbsp;Сергей
-                        Ильин.
-                      </h3>
-                      <p class="events__descr-article">
-                        Высокий уровень вовлечения представителей целевой
-                        аудитории является четким доказательством простого
-                        факта.
-                      </p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a
-                        href="#"
-                        class="events__descr-link link-hover"
-                        aria-label="Кнопка раскрытия информации"
-                        ><span class="events-span">Подробнее</span></a
-                      >
-                    </div>
+                    <h3 class="events__descr events__descr-title events-layout">
+                      «Открытая дискуссия». Дмитрий Петров и&nbsp;Сергей Ильин.
+                    </h3>
+                    <p class="events__descr-article">
+                      Высокий уровень вовлечения представителей целевой
+                      аудитории является четким доказательством простого факта.
+                    </p>
+
+                    <a
+                      href="#"
+                      class="events__descr-btn events__descr-link link-hover"
+                      aria-label="Кнопка раскрытия информации"
+                      ><span class="events-span">Подробнее</span></a
+                    >
                   </div>
                 </li>
 
@@ -1289,29 +1476,26 @@
                       alt="обложка карточки"
                     />
                   </picture>
-                  <div class="events__content events-content">
+                  <div class="events__content events__content-layout">
                     <p class="events__text">
                       Еврейский музей <br />
                       с 31 марта по 21 апреля
                     </p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title events-layout">
-                        Выставка «Формация 2020»
-                      </h3>
-                      <p class="events__descr-article">
-                        Идейные соображения высшего порядка, а также современная
-                        методология разработки играет важную роль в формировании
-                        глубокомысленных рассуждений.
-                      </p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a
-                        href="#"
-                        class="events__descr-link link-hover"
-                        aria-label="Кнопка раскрытия информации"
-                        ><span class="events-span">Подробнее</span></a
-                      >
-                    </div>
+                    <h3 class="events__descr events__descr-title events-layout">
+                      Выставка «Формация 2020»
+                    </h3>
+                    <p class="events__descr-article">
+                      Идейные соображения высшего порядка, а также современная
+                      методология разработки играет важную роль в формировании
+                      глубокомысленных рассуждений.
+                    </p>
+
+                    <a
+                      href="#"
+                      class="events__descr-btn events__descr-link link-hover"
+                      aria-label="Кнопка раскрытия информации"
+                      ><span class="events-span">Подробнее</span></a
+                    >
                   </div>
                 </li>
 
@@ -1340,24 +1524,20 @@
                       ММАМ <br />
                       с 8 апреля по 20 мая
                     </p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">
-                        Джон Винзор. Фотографии из серии «Метафора серебра»
-                      </h3>
-                      <p class="events__descr-article">
-                        Один из ведущих флорентийских художников Кватроченто,
-                        основатель художественной династии, которую продолжили
-                        его брат Давид и сын Ридольфо.
-                      </p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a
-                        href="#"
-                        class="events__descr-link link-hover"
-                        aria-label="Кнопка раскрытия информации"
-                        ><span class="events-span">Подробнее</span></a
-                      >
-                    </div>
+                    <h3 class="events__descr events__descr-title">
+                      Джон Винзор. Фотографии из серии «Метафора серебра»
+                    </h3>
+                    <p class="events__descr-article">
+                      Один из ведущих флорентийских художников Кватроченто,
+                      основатель художественной династии, которую продолжили его
+                      брат Давид и сын Ридольфо.
+                    </p>
+                    <a
+                      href="#"
+                      class="events__descr-btn events__descr-link link-hover"
+                      aria-label="Кнопка раскрытия информации"
+                      ><span class="events-span">Подробнее</span></a
+                    >
                   </div>
                 </li>
 
@@ -1368,7 +1548,7 @@
                       media="(max-width: 610px)"
                     />
                     <source
-                      srcset="img/events_fifth-786.jpg"
+                      srcset="img/events_fifth-768.jpg"
                       media="(max-width: 970px)"
                     />
                     <source
@@ -1386,23 +1566,19 @@
                       Третьяковка на Крымском валу <br />
                       с 30 марта по 30 апреля
                     </p>
-                    <div class="events__descr">
-                      <h3 class="events__descr-title">
-                        XXIV Международная биеннале молодого искусства
-                      </h3>
-                      <p class="events__descr-article">
-                        Внезапно, реплицированные с зарубежных источников,
-                        современные исследования.
-                      </p>
-                    </div>
-                    <div class="events__descr-btn">
-                      <a
-                        href="#"
-                        class="events__descr-link link-hover"
-                        aria-label="Кнопка раскрытия информации"
-                        ><span class="events-span">Подробнее</span></a
-                      >
-                    </div>
+                    <h3 class="events__descr events__descr-title">
+                      XXIV Международная биеннале молодого искусства
+                    </h3>
+                    <p class="events__descr-article">
+                      Внезапно, реплицированные с зарубежных источников,
+                      современные исследования.
+                    </p>
+                    <a
+                      href="#"
+                      class="events__descr-btn events__descr-link link-hover"
+                      aria-label="Кнопка раскрытия информации"
+                      ><span class="events-span">Подробнее</span></a
+                    >
                   </div>
                 </li>
               </ul>
@@ -1523,58 +1699,70 @@
             >
               <div class="swiper-wrapper">
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img
-                      src="img/projects_first-1920.png"
-                      alt="freelands foundation"
-                    />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_first-1920.png"
+                    alt="freelands foundation"
+                  />
                 </a>
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img
-                      src="img/projects_second-1920.png"
-                      alt="institute for contemporary art"
-                    />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_second-1920.png"
+                    alt="institute for contemporary art"
+                  />
                 </a>
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img src="img/projects_third-1920.png" alt="workhouse" />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_third-1920.png"
+                    alt="workhouse"
+                  />
                 </a>
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img src="img/projects_fourth-1920.png" alt="wine co" />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_fourth-1920.png"
+                    alt="wine co"
+                  />
+                </a>
+                <a
+                  href="#"
+                  class="projects__slide swiper-slide projects__slide-layout"
+                >
+                  <img
+                    class="projects__picture"
+                    src="img/projects_fifth-1920.png"
+                    alt="hiscox"
+                  />
                 </a>
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img src="img/projects_fifth-1920.png" alt="hiscox" />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_six-1920.png"
+                    alt="Stassen"
+                  />
                 </a>
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img src="img/projects_six-1920.png" alt="Stassen" />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_seven-1920.png"
+                    alt="watts gallery artists village"
+                  />
                 </a>
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img
-                      src="img/projects_seven-1920.png"
-                      alt="watts gallery artists village"
-                    />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_eight-1920.png"
+                    alt="camden"
+                  />
                 </a>
                 <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img src="img/projects_eight-1920.png" alt="camden" />
-                  </picture>
-                </a>
-                <a href="#" class="projects__slide swiper-slide">
-                  <picture class="projects__picture">
-                    <img src="img/projects_nine-1920.png" alt="esad" />
-                  </picture>
+                  <img
+                    class="projects__picture"
+                    src="img/projects_nine-1920.png"
+                    alt="esad"
+                  />
                 </a>
               </div>
             </div>

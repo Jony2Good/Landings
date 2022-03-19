@@ -1,19 +1,19 @@
 .about {
-  padding-top: 4.938rem;
-  padding-bottom: 4.438rem;
+  padding-top: 79px;
+  padding-bottom: 71px;
 }
 
 .about__title {
-  margin-bottom: 0.938rem;
+  margin-bottom: 15px;
 }
 
 .about__text {
-  max-width: 68.188rem;
+  max-width: 1091px;
 }
 
 @media (max-width: 1280px) {
   .about {
-    padding-bottom: 4.375rem;
+    padding-bottom: 70px;
   }
 }
 @media (max-width: 610px) {
@@ -21,15 +21,15 @@
     padding: 51px 3px 39px 1px;
   }
   .about__title {
-    font-size: 1.75rem;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
-    line-height: 2.2rem;
+    line-height: 35px;
   }
   .about__text {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.75rem;
+    line-height: 28px;
   }
 }
