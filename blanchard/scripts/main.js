@@ -542,3 +542,4 @@ validation
     },
   ]);
 
+  const modal = new GraphModal();
