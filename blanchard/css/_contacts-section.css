@@ -324,6 +324,11 @@
   .contacts__social-item {
     margin-right: 20px;
   }
+  .contacts-form__validation {
+    width: 100%;
+    margin-right: 0;
+}
+
 }
 
 @media (max-width: 320px) {
@@ -367,9 +372,6 @@
     background-color: var(--white);
     border-radius: 100px;
   }
-  .contacts-form__input {
-    min-width: 100%;
-  }
 
   .contacts__map {
     min-height: 328px !important;
@@ -379,8 +381,6 @@
     padding: 11px 24px 8px 24px;
   }
   .contacts-form__validation {
-    width: 100%;
-    margin-right: 0;
     margin-bottom: 20px;
   }
   .just-validate-error-label {
@@ -388,5 +388,8 @@
     -webkit-transform: translateY(-58px);
     -ms-transform: translateY(-58px);
     transform: translateY(-58px);
+  }
+  .contacts-form__input {
+    min-width: 100%;
   }
 }

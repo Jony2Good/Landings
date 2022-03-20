@@ -195,19 +195,20 @@
     background-image: url("../img/hero-320-third.jpg");
   }
   .hero__container {
+    width: 265px;
+    margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 57px;
     text-align: center;
+
   }
   .hero__title {
-    margin: 0 auto;
     margin-bottom: 12px;
     font-size: 32px;
     line-height: 38px;
   }
   .hero__text {
-    width: 283px;
-    padding-left: 8px;
+    padding-left: 0;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px
@@ -217,7 +218,6 @@
   }
 
   .hero__link {
-    margin: 0 auto;
     padding: 11px 19px;
     font-size: 12px;
     line-height: 16px;
