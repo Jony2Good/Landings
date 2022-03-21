@@ -256,15 +256,11 @@
     padding-top: 43px;
     padding-bottom: 38px;
   }
-  .contacts-form__input {
-    min-width: 323px;
-  }
-
-  .contacts-form {
+   .contacts-form {
     margin-bottom: 25px;
   }
   .contacts-form__input {
-    padding: 18px 24px 11px 24px;
+    padding: 17px 24px 11px 24px;
   }
   .contacts__btn {
     padding: 13px 27px;
@@ -273,6 +269,11 @@
     margin-bottom: 14px;
     margin-right: 20px;
   }
+
+  .contacts-form__input {
+    width: 323px;
+  }
+
   .just-validate-error-label {
     top: auto;
     -webkit-transform: translateY(-67px);
@@ -327,6 +328,15 @@
   .contacts-form__validation {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 20px;
+}
+.contacts-form__input {
+  width: 100%;
+}
+.just-validate-error-label {
+  -webkit-transform: translateY(-65px);
+  -ms-transform: translateY(-65px);
+  transform: translateY(-65px);
 }
 
 }

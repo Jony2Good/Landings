@@ -16,6 +16,7 @@
 }
 
 .tooltip-icon {
+  padding: 0;
   border: none;
   background: transparent;
   -webkit-transform: translateY(3px);

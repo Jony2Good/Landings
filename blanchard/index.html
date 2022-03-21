@@ -561,7 +561,7 @@
               <h2 class="gallery__title sub-title">Галерея</h2>
               <span class="gallery__span-text descr">Фильтр:</span>
 
-              <div class="gallery__choices" tabindex="0">
+              <div class="gallery__choices">
                 <select name="style" class="gallery__select" id="select">
                   <option selected>Живопись</option>
                   <option>Рисунок</option>
@@ -570,24 +570,20 @@
               </div>
 
               <form action="#" method="post" class="form-content">
-                <label class="gallery__checkbox" tabindex="0">
-                  <input type="checkbox" class="gallery__input" />
+                <label class="check-label gallery__checkbox">
+                  <input class="visually-hidden checkbox" type="checkbox" />
                   <span class="checkmark"></span>
-                  <span class="chek-text">XIX век</span>
+                  <span class="check-text">XIX век</span>
                 </label>
-                <label class="gallery__checkbox" tabindex="0">
-                  <input
-                    type="checkbox"
-                    class="gallery__input"
-                    checked="checked"
-                  />
+                <label class="check-label gallery__checkbox">
+                  <input class="visually-hidden checkbox" type="checkbox" />
                   <span class="checkmark"></span>
-                  <span class="chek-text">XX век</span>
+                  <span class="check-text">XX век</span>
                 </label>
-                <label class="gallery__checkbox" tabindex="0">
-                  <input type="checkbox" class="gallery__input" />
+                <label class="check-label gallery__checkbox">
+                  <input class="visually-hidden checkbox" type="checkbox" />
                   <span class="checkmark"></span>
-                  <span class="chek-text">Современность</span>
+                  <span class="check-text">Современность</span>
                 </label>
               </form>
             </div>
@@ -1901,6 +1897,7 @@
               href="https://vk.com"
               class="footer__link-social"
               target="_blank"
+              aria-label="Наша страница Вконтакте"
             >
               <svg
                 viewBox="0 0 45 45"
@@ -1919,6 +1916,7 @@
               href="https://www.instagram.com"
               class="footer__link-social"
               target="_blank"
+              aria-label="Наша страница в Инстаграме"
             >
               <svg
                 viewBox="0 0 45 45"
@@ -1944,7 +1942,7 @@
             <a
               href="https://ru-ru.facebook.com"
               class="footer__link-social"
-              target="_blank"
+              target="_blank" aria-label="Наша страница в Фейсбуке"
             >
               <svg
                 viewBox="0 0 45 45"

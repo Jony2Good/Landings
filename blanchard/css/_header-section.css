@@ -1200,7 +1200,7 @@
 
   .burger__line {
     top: calc(50% - 1px / 2);
-    height: 2px;
+    height: 3px;
     -webkit-transform: scaleX(calc(16 / 25));
     -ms-transform: scaleX(calc(16 / 25));
     transform: scaleX(calc(16 / 25));
