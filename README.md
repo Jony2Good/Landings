@@ -1,5 +1,5 @@
-# Study-projects
-Scillbox.ru school (my progess)
+# Landings
+
 
 First project:
 http://lagoona.ct77688.tmweb.ru/ 
